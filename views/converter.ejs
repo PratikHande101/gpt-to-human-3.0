@@ -11,11 +11,11 @@
 <body>
 	<h1>ChatGPT to Human</h1>
     <div id="main">
-        <form method="POST" action="/result">
-            <label for="question">Convert your essay: </label>
-            <textarea id="question" cols="5" name="question"><%=  question%></textarea>
+        <form method="POST" action="">
+            <!-- <label for="question">Convert your essay: </label> -->
+            <textarea id="question" cols="5" name="question" placeholder="Enter your essay here..."><%=  question%></textarea>
             <div class="buttons">
-                <button type="submit">Convert</button>
+                <button id="convertButton" type="submit">Convert</button>
                 <button id="clearButton" type="reset">Clear</button>
             </div>
         </form>
@@ -27,7 +27,11 @@
     </div>
 
     <script>
-        console.log("Button pressed!");
+        // const convertButton = document.getElementById("convertButton");
+        // convertButton.addEventListener("click", () => {
+        //     document.getElementById("answer").innerHTML = "";
+        // })
+
         const clearButton = document.getElementById("clearButton");
         clearButton.addEventListener("click", () => {
           document.getElementById("question").value = "";
