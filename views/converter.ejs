@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ChatGPT to Human</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+	<h1>ChatGPT to Human</h1>
+    <div id="main">
+        <form method="POST" action="/result">
+            <label for="question">Convert your essay: </label>
+            <textarea id="question" cols="5" name="question"><%=  question%></textarea>
+            <div class="buttons">
+                <button type="submit">Convert</button>
+                <button id="clearButton" type="reset">Clear</button>
+            </div>
+        </form>
+        <div id="answer">
+            <% answer.forEach((paragraph) => { %>
+                <p><%= paragraph %></p>
+            <% }); %>
+        </div>
+    </div>
+
+    <script>
+        console.log("Button pressed!");
+        const clearButton = document.getElementById("clearButton");
+        clearButton.addEventListener("click", () => {
+          document.getElementById("question").value = "";
+          document.getElementById("answer").innerHTML = "";
+          window.location.href = '/';
+        });
+    </script>
+</body>
+</html>
+
+
