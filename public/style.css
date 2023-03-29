@@ -13,7 +13,8 @@ h1 {
     justify-content: center;
     margin-top: 5px;
     gap: 10px;
-    height: 623px;
+    /* height: 623px; */
+    height: 85vh;
 }
 
 form {
@@ -26,15 +27,17 @@ form {
 }
 
 #question {
-    resize: vertical;
+    resize:none;
     height: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
+    font-size: 1.1em;
 }
 
 #question:focus {
-    outline: 1px solid grey;
+    outline: none;
+    border: 1px solid rgb(196, 196, 196);
 }
 
 .buttons {
